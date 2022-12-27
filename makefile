@@ -15,4 +15,4 @@ all: txtfind isort
 .PHONY: clean all
 
 clean:
-	rm -f *.o *.out txtfind isort *.gch
+	rm -f *.o *.out txtfind isort *.gch *.txt
