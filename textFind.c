@@ -62,7 +62,7 @@ int getWord(char w[WORD]) {
   // If all characters in string2 were found in string1 (j == n), and max_deletions
   // is non-negative, then string2 is a substring of string1 with at most max_deletions
   // deletions.
-  return (j == n && max_deletions >= 0);
+  return (j == n && max_deletions >= 0 && i == m);
 }
 
 
