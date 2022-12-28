@@ -140,7 +140,6 @@ int main()
   if (AorB == 'a')
   {
     print_lines(theWord);
-    printf("\n");
   }
   else if (AorB == 'b')
   {
