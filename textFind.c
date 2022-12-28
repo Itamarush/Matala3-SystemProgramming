@@ -18,8 +18,6 @@ int getLine(char s[LINE]) {
     return count;
 }
 
-/*Function gets string from the standard input and saves it
-  in the argument. Function returns the number of char that was gotten*/
 int getWord(char w[WORD]) {
     int count = 0;
     char c = getchar();
@@ -35,43 +33,29 @@ int getWord(char w[WORD]) {
   int m = strlen(string1);
   int n = strlen(string2);
 
-  // If the length of string2 is more than the length of string1, then
-  // string2 cannot be obtained from string1 by deleting at most max_deletions
-  // characters.
-  if (n > m) {
+  if (n > m)
+  {
     return 0;
   }
 
   int i = 0;
   int j = 0;
 
-  // Loop through both strings, comparing characters at each position.
   while (i < m && j < n) {
-    // If the characters match, increment both i and j.
-    if (string1[i] == string2[j]) {
+    if (string1[i] == string2[j])
+    {
       i++;
       j++;
     }
-    else {
-      // If the characters don't match, increment i and decrement max_deletions.
+    else
+    {
       i++;
       max_deletions--;
     }
   }
-
-  // If all characters in string2 were found in string1 (j == n), and max_deletions
-  // is non-negative, then string2 is a substring of string1 with at most max_deletions
-  // deletions.
   return (j == n && max_deletions >= 0 && (i == m || i == m - max_deletions));
 }
 
-
-// int substring(const char* str1, const char* str2) {
-//   return strstr(str2, str1) != NULL;
-// }
-
-
-/*Function gets two strings and returns if str2 is in str1 */
 int substring(char* str1, char* str2) {
     int m = strlen(str1);
     int n = strlen(str2);
@@ -84,15 +68,17 @@ int substring(char* str1, char* str2) {
     while (*(str1)) {
         
         while (str2[counter] != '\0' && *(str1) == str2[counter]) {  
-            counter++;
             str1++;
+            counter++;
         }
         
-        if(counter == n)
-            return 1;
+        if(n == counter)
+        {
+          return 1;
+        }
         
-        counter = 0;
-        str1++; 
+        str1++;
+        counter = 0; 
     }
     return 0;
 }
