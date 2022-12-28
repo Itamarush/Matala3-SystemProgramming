@@ -20,14 +20,15 @@ int getLine(char s[LINE]) {
 }
 
 int getWord(char w[WORD]) {
-    int count = 0;
-    char c = getchar();
-    while(count < WORD - 1 && c != '\n' && c != '\t' && c != ' ') {
-        w[count++] = c;
-        c = getchar();
+    int counter = 0;
+    char ch = getchar();
+    while(counter < WORD - 1 && ch != '\n' && ch != '\t' && ch != ' ') {
+        w[counter] = ch;
+        counter++;
+        ch = getchar();
     }
-    w[count] = '\0'; 
-    return count;
+    w[counter] = 0; 
+    return counter;
 }
 
   int similar(char* string1, char* string2, int max_deletions) {
