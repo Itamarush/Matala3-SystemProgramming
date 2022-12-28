@@ -73,27 +73,28 @@ int getWord(char w[WORD]) {
 
 /*Function gets two strings and returns if str2 is in str1 */
 int substring(char* str1, char* str2) {
-    int len1 = strlen(str1);
-    int len2 = strlen(str2);
+    int m = strlen(str1);
+    int n = strlen(str2);
     
-    if(len2 > len1)
+    if(n > m)
         return 0;
     
-    int count = 0;
+    int counter = 0;
+
     while (*(str1)) {
         
-        while (*(str2 + count) != '\0' && *(str1) == *(str2 + count)) {
-            count++;
+        while (str2[counter] != '\0' && str1[0] == str2[counter]) {
+            counter++;
             str1++;
         }
         
-        if(count == len2)// found substring
+        if(counter == n)
             return 1;
         
         count = 0;
         str1++; 
     }
-    return 0;// wasnt found
+    return 0;
 }
 
 void print_lines(char* str) {
