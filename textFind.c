@@ -8,14 +8,15 @@
 #define LINE 256
 
 int getLine(char s[LINE]) {
-    int count = 0;
-    char c = getchar();
-    while (count < LINE - 1 && c != '\n' && c != '\r') {
-        s[count++] = c;  
-        c = getchar();
+    int counter = 0;
+    char ch = getchar();
+    while (counter < LINE - 1 && ch != '\n' && ch != '\r') {
+        s[counter] = ch;
+        counter++;  
+        ch = getchar();
     }
-    s[count] = '\0';
-    return count;
+    s[counter] = 0;
+    return counter;
 }
 
 int getWord(char w[WORD]) {
