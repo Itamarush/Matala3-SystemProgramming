@@ -83,7 +83,7 @@ int substring(char* str1, char* str2) {
 
     while (*(str1)) {
         
-        while (*(str2 + counter) != '\0' && *(str1) == *(str2 + counter)) {  
+        while (str2[counter] != '\0' && *(str1) == str2[counter]) {  
             counter++;
             str1++;
         }
