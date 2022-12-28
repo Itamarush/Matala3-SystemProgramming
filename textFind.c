@@ -97,34 +97,36 @@ int substring(char* str1, char* str2) {
 }
 
 void print_lines(char* str) {
-    char line[LINE] = "0";
+    char arr[LINE] = {};
     int count = 0;
     while (count < LINE - 1) {
-        count = getLine(line);
-        if(substring(line, str))
-            printf("%s\n", line);
+        count = getLine(arr);
+        if(substring(arr, str))
+        {
+          printf("%s\n", arr);
+        }
     }  
 }
 
-/*Function gets string to search in the text if
-  there are words that look similar to the string*/
 void print_similar_words(char* str) {
-    char word[WORD] = "0";
+    char arr[WORD] = {};
     int count = 0;
     while(count < WORD - 1) {
-        count = getWord(word);
-        if(similar(word, str, 1))
-            printf("%s\n", word);
+        count = getWord(arr);
+        if(similar(arr, str, 1))
+        {
+          printf("%s\n", arr);
+        }
     }
 }
 
 void print(char *arr)
 {
-    char *pointer = arr;
-    while (*pointer)
+    char *pArr = arr;
+    while (*pArr)
     {
-        printf("%c", *pointer);
-        pointer++;
+        printf("%c", *pArr);
+        pArr++;
     }
     printf("\n");
 }
