@@ -91,7 +91,7 @@ int substring(char* str1, char* str2) {
         if(counter == n)
             return 1;
         
-        count = 0;
+        counter = 0;
         str1++; 
     }
     return 0;
