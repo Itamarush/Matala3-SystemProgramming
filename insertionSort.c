@@ -23,7 +23,7 @@ void insertion_sort(int* arr , int len)
 
         while (j >= 0 && *(arr+j) > current)  
             {
-            shift_element(arr, j);
+            *(arr + j + 1) = *(arr + j);
             j = j - 1;
             }
             *(arr + j + 1) = current;
